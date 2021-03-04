@@ -31,7 +31,7 @@ formulario.addEventListener('submit', (event) => {
 
     password.classList.remove('invalid');
     passwordError.innerHTML = "";
-    birthdate.classList.remove('invalid');
+    birthdate.classList.remove('invalid')
     dateError.innerHTML = "";
     username.classList.remove('invalid');
     usernameError.innerHTML = "";
@@ -82,8 +82,7 @@ formulario.addEventListener('submit', (event) => {
     ipcRenderer.on('username-checked', (event, check) => {
         if (check) {    
             usernameError.innerHTML = "Usuario existe";
-            invalidateField(document.getElementById('username'), document.getElementById('usernameError'));
-            numErrors ++;
+            invalidateField(username, usernameError);
         }
     });
 
